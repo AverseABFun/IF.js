@@ -17,6 +17,7 @@ console.log(
     white-space: nowrap;
   }
   `;
+  document.head.appendChild(style);
   
   if (!document.location.hash) {
     document.location.hash = document.querySelector('.show-start').id;
