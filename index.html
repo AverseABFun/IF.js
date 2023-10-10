@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IF.js example</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Insert styles here -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://raw.githubusercontent.com/AverseABFun/IF.js/main/icon.png"
+    />
+  </head>
+  <body>
+    <main>
+      <h1 class="title">IF.js example</h1>
+      <div id="game-container">
+        <p id="cover-page" class="page show-start">
+          Note: You can use the back button, you just also have to hit reload
+          for some reason.<br />
+          <button class="change-page" data-to-page="start">Start!</button>
+        </p>
+        <p id="start" class="page">
+          This is a example game in IF.js. And look! A wild button! It leads to page2 and sets the variable 'variable' to "Bonjour"!<br />
+          <br />
+          <button
+            class="change-page set-var"
+            data-to-page="page2"
+            data-var="variable"
+            data-value="Bonjour"
+          >
+            WILD BUTTON
+          </button>
+        </p>
+        <p id="page2" class="page">
+            Hello, this is page2! See the URL bar and how the hash(the part after the # sign) has changed to "page2"? That means you are on page2!
+            And the value of the variable 'variable' is&nbsp;<span class="dont-break"><span class="get-var" data-var="variable"></span></span>!<br>
+            <br>
+            <button class="change-page set-var" data-to-page="page2" data-var="variable" data-value="Hallo">Set variable to "Hallo"</button><button class="change-page set-var" data-to-page="page2" data-var="variable" data-value="Bonjour">Set variable to "Bonjour"</button>
+        </p>
+      </div>
+    </main>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
