@@ -1,7 +1,3 @@
-console.log(
-    'I said nothing to see here!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWell hello there...\nNothing to see here...'
-  );
-  
   window.gameVars = JSON.parse(window.localStorage.getItem('gameVars') || '{}');
   var style = document.createElement("style");
   style.innerText = `
