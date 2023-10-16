@@ -145,7 +145,7 @@ function subsitute_blocks(meta, str) {
         output = output.replaceAll(matches2[i], `<span class="dont-break"><span class="insert-var" data-var="${matches2.replace("{","").replace("}","")}"></span></span>`);
     }
     for (var i = 0; i<matches2.length; i++) {
-        var item = matches2[i];
+        var item = (' ' + matches2[i]).slice(1);
         item = item.replace("{{button-redirect","");
         item = item.substring(0, item.length - 2);
         item = item.split(",");
@@ -173,7 +173,7 @@ function subsitute_blocks(meta, str) {
         output.replaceAll(matches2[i],`<button class="change-page" data-to-page="${toPage}">${innerHTML}</button>`);
     }
     for (var i = 0; i<matches3.length; i++) {
-        var item = matches3[i];
+        var item = (' ' + matches3[i]).slice(1);
         item = item.replace("{{button-setvar","");
         item = item.substring(0, item.length - 2);
         item = item.split(",");
