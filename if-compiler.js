@@ -170,7 +170,7 @@ function subsitute_blocks(meta, str) {
                     break;
             }
         }
-        output.replaceAll(matches2[i],`<button class="change-page" data-to-page="${toPage}">${innerHTML}</button>`);
+        output = output.replaceAll(matches2[i],`<button class="change-page" data-to-page="${toPage}">${innerHTML}</button>`);
     }
     for (var i = 0; i<matches3.length; i++) {
         var item = (' ' + matches3[i]).slice(1);
@@ -204,7 +204,7 @@ function subsitute_blocks(meta, str) {
                     break;
             }
         }
-        output.replaceAll(matches3[i],`<button class="change-page set-var" data-to-page="${toPage}" data-var="${variable}" data-value="${value}">${innerHTML}</button>`);
+        output = output.replaceAll(matches3[i],`<button class="change-page set-var" data-to-page="${toPage}" data-var="${variable}" data-value="${value}">${innerHTML}</button>`);
     }
     return output;
 }
