@@ -4,7 +4,6 @@
     <title>IF.js JSON compiler</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <!-- Insert styles here -->
     <link
       rel="icon"
       type="image/png"
@@ -12,7 +11,7 @@
     />
 </head>
 <body>
-    <textarea name="input" id="input" cols="30" rows="10">{
+    <textarea name="input" id="input" cols="30" rows="10" style="width: 100%;">{
         "meta": {
             "title": "Mockup of IF.js json format idea",
             "author": "Arthur Beck",
@@ -34,10 +33,10 @@
                 "contents": "Page2! variable is {variable} {{button_spacing}} {{button-setvar[page2],[variable='Bonjour'],[Set variable to 'Bonjour'!]}}"
             }
         ]
-    }</textarea>
+    }</textarea><br>
     <button onclick="compile();">Compile!</button>
-    <textarea name="log" id="log" cols="30" rows="10"></textarea>
-    <textarea name="output" id="output" cols="30" rows="10"></textarea>
+    <textarea name="log" id="log" cols="30" rows="10" style="width: 50%"></textarea>
+    <textarea name="output" id="output" cols="30" rows="10" style="width: 50%"></textarea>
     <script src="if-compiler.js"></script>
 </body>
 </html>
