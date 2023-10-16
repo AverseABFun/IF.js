@@ -200,6 +200,7 @@ function subsitute_blocks(meta, str) {
         }
         output.replaceAll(matches3[i],`<button class="change-page set-var" data-to-page="${toPage}" data-var="${variable}" data-value="${value}">${innerHTML}</button>`);
     }
+    return output;
 }
 function finish_compiling(pages_compiled) {
     return pages_compiled;
