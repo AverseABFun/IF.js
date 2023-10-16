@@ -96,7 +96,7 @@ function compile_meta(meta, pages) {
         [((pages_data))]
         </div>
     </main>
-    <script type="module" src="if.js"></script>
+    <script type="module" src="https://raw.githubusercontent.com/AverseABFun/IF.js/main/if.js"></script>
   </body>
 </html>`;
 }
