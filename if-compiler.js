@@ -102,18 +102,18 @@ function compile_meta(meta, pages) {
 }
 function compile_pages(meta, pages, meta_compiled) {
     try {
-    var data = "";
+    var data = meta_compiled;
     var shouldReturnFalse = false;
     for (var i = 0; i<pages.length; i++) {
         if (pages[i].id == meta.start) {
-            data = meta_compiled.replace("[((pages_data))]",`<p id="${pages[i].id}" class="page show-start">
+            data = data.replace("[((pages_data))]",`<p id="${pages[i].id}" class="page show-start">
             ${(function(){var variable = subsitute_blocks(meta, pages[i].contents); if (!variable){shouldReturnFalse = true;}})()}
           </p>[((pages_data))]`);
           if (shouldReturnFalse) {
             return false;
           }
         } else {
-            data = meta_compiled.replace("[((pages_data))]",`<p id="${pages[i].id}" class="page">
+            data = data.replace("[((pages_data))]",`<p id="${pages[i].id}" class="page">
             ${(function(){var variable = subsitute_blocks(meta, pages[i].contents); if (!variable){shouldReturnFalse = true;}})()}
           </p>[((pages_data))]`);
           if (shouldReturnFalse) {
@@ -121,7 +121,7 @@ function compile_pages(meta, pages, meta_compiled) {
           }
         }
     }
-    data = meta_compiled.replace("[((pages_data))]",``);
+    data = data.replace("[((pages_data))]",``);
     return data;
     } catch(e) {
         log(`Weird error: ${e.toString()}
