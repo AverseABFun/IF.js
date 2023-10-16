@@ -101,6 +101,7 @@ function compile_meta(meta, pages) {
 </html>`;
 }
 function compile_pages(meta, pages, meta_compiled) {
+    try {
     var data = "";
     var shouldReturnFalse = false;
     for (var i = 0; i<pages.length; i++) {
@@ -122,6 +123,10 @@ function compile_pages(meta, pages, meta_compiled) {
     }
     data = meta_compiled.replace("[((pages_data))]",``);
     return data;
+    } catch(e) {
+        log(`Weird error: ${e.toString()}
+        Debug it, captain!`)
+    }
 }
 function subsitute_blocks(meta, str) {
     var output = str;
