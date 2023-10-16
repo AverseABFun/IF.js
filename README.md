@@ -1,6 +1,6 @@
 # IF.js
 IF.js is a JS library for making interactive fiction/CYOA books on the web.
-You can see an example of it [here](averseabfun.github.io/IF.js), you can also see the code for that in the index.html file. The actual code for the library is in `if.js` and to import it you can do:
+You can see an example of it [here](https://averseabfun.github.io/IF.js), you can also see the code for that in the index.html file. The actual code for the library is in `if.js` and to import it you can do:
 ```html
 <script type="module" src="https://raw.githubusercontent.com/AverseABFun/IF.js/main/if.js"></script>
 ```
