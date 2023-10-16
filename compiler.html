@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IF.js JSON compiler</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Insert styles here -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://raw.githubusercontent.com/AverseABFun/IF.js/main/icon.png"
+    />
+</head>
+<body>
+    <textarea name="input" id="input" cols="30" rows="10">{<br>
+        "meta": {<br>
+            "title": "Mockup of IF.js json format idea",<br>
+            "author": "Arthur Beck",<br>
+            "start": "cover_page",<br>
+            "icon": "https://raw.githubusercontent.com/AverseABFun/IF.js/main/icon.png",<br>
+            "custom_styles": "https://raw.githubusercontent.com/AverseABFun/IF.js/main/test_mockup_style.css"<br>
+        },<br>
+        "pages": [<br>
+            {<br>
+                "id": "cover_page",<br>
+                "contents": "{{title}} by {{author}} {{button_spacing}} {{button-redirect[start],[Start!]}}"<br>
+            },<br>
+            {<br>
+                "id": "start",<br>
+                "contents": "This is a mockup of the JSON format to be used to test it {{button_spacing}} {{button-setvar[page2],[variable='Hallo'],[Go to page2 and set variable to 'Hallo'!]}}"<br>
+            },<br>
+            {<br>
+                "id": "page2",<br>
+                "contents": "Page2! variable is {variable} {{button_spacing}} {{button-setvar[page2],[variable='Bonjour'],[Set variable to 'Bonjour'!]}}"<br>
+            }<br>
+        ]<br>
+    }</textarea>
+    <button onclick="compile();">Compile!</button>
+    <textarea name="log" id="log" cols="30" rows="10" disabled></textarea>
+    <textarea name="output" id="output" cols="30" rows="10" disabled></textarea>
+    <script type="module" src="if-compiler.js"></script>
+</body>
+</html>

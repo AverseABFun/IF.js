@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "title": "Mockup of IF.js json format idea",
+        "author": "Arthur Beck",
+        "start": "cover_page",
+        "icon": "https://raw.githubusercontent.com/AverseABFun/IF.js/main/icon.png",
+        "custom_styles": "https://raw.githubusercontent.com/AverseABFun/IF.js/main/test_mockup_style.css"
+    },
+    "pages": [
+        {
+            "id": "cover_page",
+            "contents": "{{title}} by {{author}} {{button_spacing}} {{button-redirect[start],[Start!]}}"
+        },
+        {
+            "id": "start",
+            "contents": "This is a mockup of the JSON format to be used to test it {{button_spacing}} {{button-setvar[page2],[variable=Hallo],[Go to page2 and set variable to 'Hallo'!]}}"
+        },
+        {
+            "id": "page2",
+            "contents": "Page2! variable is {variable} {{button_spacing}} {{button-setvar[page2],[variable='Bonjour'],[Set variable to 'Bonjour'!]}}"
+        }
+    ]
+}
