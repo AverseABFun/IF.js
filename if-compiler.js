@@ -18,6 +18,7 @@ function find_matches(regex, str) {
 }
 
 function compile() {
+    document.getElementById("log").innerHTML = "";
     log("Beginning compiling...");
     var data = document.getElementById("input").innerHTML;
     var meta = {};
