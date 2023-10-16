@@ -107,14 +107,14 @@ function compile_pages(meta, pages, meta_compiled) {
     for (var i = 0; i<pages.length; i++) {
         if (pages[i].id == meta.start) {
             data = data.replace("[((pages_data))]",`<p id="${pages[i].id}" class="page show-start">
-            ${(function(){var variable = subsitute_blocks(meta, pages[i].contents); if (!variable){shouldReturnFalse = true;}})()}
+            ${(function(){var variable = subsitute_blocks(meta, pages[i].contents); if (!variable){shouldReturnFalse = true;}return variable;})()}
           </p>[((pages_data))]`);
           if (shouldReturnFalse) {
             return false;
           }
         } else {
             data = data.replace("[((pages_data))]",`<p id="${pages[i].id}" class="page">
-            ${(function(){var variable = subsitute_blocks(meta, pages[i].contents); if (!variable){shouldReturnFalse = true;}})()}
+            ${(function(){var variable = subsitute_blocks(meta, pages[i].contents); if (!variable){shouldReturnFalse = true;}return variable;})()}
           </p>[((pages_data))]`);
           if (shouldReturnFalse) {
             return false;
