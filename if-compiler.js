@@ -79,7 +79,7 @@ function compile_meta(meta, pages) {
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>IF.js example</title>
+        <title>${meta.title}</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         ${meta.custom_styles ? `<link rel="stylesheet" href="${meta.style}"/>` : ""}
