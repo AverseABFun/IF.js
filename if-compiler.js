@@ -142,7 +142,7 @@ function subsitute_blocks(meta, str) {
     output = output.replaceAll("{{button_spacing}}", "<br><br>");
 
     for (var i = 0; i<matches1.length; i++) {
-        output = output.replaceAll(matches2[i], `<span class="dont-break"><span class="insert-var" data-var="${matches2.replace("{","").replace("}","")}"></span></span>`);
+        output = output.replaceAll(matches2[i], `<span class="dont-break"><span class="insert-var" data-var="${matches1[i].replace("{","").replace("}","")}"></span></span>`);
     }
     for (var i = 0; i<matches2.length; i++) {
         var item = (' ' + matches2[i]).slice(1);
