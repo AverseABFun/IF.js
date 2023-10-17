@@ -83,6 +83,19 @@ function compile_meta(meta, pages) {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         ${meta.custom_styles ? `<link rel="stylesheet" href="${meta.style}"/>` : ""}
+        <style>
+      .page {
+        opacity: 0;
+        display: none;
+      }
+      .check-var {
+        opacity: inherit;
+        display: inherit;
+      }
+      .dont-break {
+        white-space: nowrap;
+      }
+    </style>
         <link
           rel="icon"
           type="image/png"
@@ -96,7 +109,7 @@ function compile_meta(meta, pages) {
         [((pages_data))]
         </div>
     </main>
-    <script type="module" src="https://raw.githubusercontent.com/AverseABFun/IF.js/main/if.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/AverseABFun/IF.js/if.js"></script>
   </body>
 </html>`;
 }
